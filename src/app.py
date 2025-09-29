@@ -21,6 +21,45 @@ app = FastAPI(title="Mergington High School API",
 current_dir = Path(__file__).parent
 app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
+        # Add more activities
+        activities.update({
+            "Basketball Team": Activity(
+                description="Join the school basketball team and compete in local leagues",
+                schedule="Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
+                max_participants=15,
+                participants=["alex@mergington.edu"]
+            ),
+            "Soccer Club": Activity(
+                description="Practice soccer skills and play friendly matches",
+                schedule="Wednesdays, 3:30 PM - 5:30 PM",
+                max_participants=18,
+                participants=["lucas@mergington.edu"]
+            ),
+            "Art Club": Activity(
+                description="Explore painting, drawing, and other visual arts",
+                schedule="Mondays, 3:30 PM - 5:00 PM",
+                max_participants=16,
+                participants=["mia@mergington.edu"]
+            ),
+            "Drama Society": Activity(
+                description="Participate in acting, stage production, and school plays",
+                schedule="Fridays, 4:00 PM - 6:00 PM",
+                max_participants=20,
+                participants=["liam@mergington.edu"]
+            ),
+            "Math Olympiad": Activity(
+                description="Prepare for math competitions and solve challenging problems",
+                schedule="Thursdays, 3:30 PM - 5:00 PM",
+                max_participants=10,
+                participants=["noah@mergington.edu"]
+            ),
+            "Debate Club": Activity(
+                description="Develop public speaking and argumentation skills",
+                schedule="Tuesdays, 4:00 PM - 5:30 PM",
+                max_participants=14,
+                participants=["ava@mergington.edu"]
+            ),
+        })
 
 # In-memory activity database
 
